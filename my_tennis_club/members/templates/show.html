@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Détails du train</title>
+</head>
+<body>
+<header>
+    <img id="chat_bot" src="{% static 'img/chat_bot.png' %}" alt="chat_bot">
+    <nav>
+        <div>
+            <i id="bars" class="fa-solid fa-bars"></i>
+            <img src="{% static 'img/logo_train.jpg' %}" alt="nav_logo">
+        </div>
+        <ul>
+            <i id="xmark" class="fa-solid fa-xmark"></i>
+            <li>Acceuil</li>
+            <li>Actualité</li>
+            <li>Nos lignes</li>
+            <li>Contactez-nous</li>
+        </ul>
+        <div>
+            <input type="search" id="search" placeholder="Rechercher...">
+            <button type="button" name="co" id="co"><i class="fa-solid fa-user-plus"></i>Inscription</button>
+            <button type="button" name="co" id="co"><i class="fa-solid fa-user"></i>Connexion</button>
+        </div>
+    </nav>
+</header>
+<main>
+    <section id="banner">
+        <div class="sbanner">
+            <h1>Vous revoilà ! </h1>
+            <p>Consultez toutes les lignes ! </p>
+        </div>
+
+        <div class="details_train">
+            <h1>Détails de la ligne de train : {{ lignes.nom_ligne }}</h1>
+            <p>Id de la ligne : {{ lignes.ligneId }}</p>
+            <p>Nom de la ligne de train : {{ lignes.nom_ligne }}</p>
+            <p>Départ : {{ lignes.depart_ligne }}</p>
+            <p>Destination : {{ lignes.destination_ligne }}</p>
+            <p>Heure de départ : {{ lignes.start_ligne }}</p>
+            <p>Heure d'arrivée : {{ lignes.end_ligne }}</p>
+
+            {% if ligne.plan_ligne %}
+                <a href="{{ lignes.plan_ligne.url }}" target="_blank">
+                    <img src="{{ lignes.plan_ligne.url }}" alt="Plan de la ligne de train">
+                </a>
+            {% else %}
+                <p>Aucun plan de ligne disponible</p>
+            {% endif %}
+        </div>
+    </section>
+</main>
+<footer>
+</footer>
+</body>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="https://kit.fontawesome.com/9d929d966a.js" crossorigin="anonymous"></script>
+</html>

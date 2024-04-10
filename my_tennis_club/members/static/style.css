@@ -1,0 +1,275 @@
+
+:root{
+    --basic_family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: white;
+font-family: var(--basic_family);
+position: relative;
+}
+#chat_bot{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: block;
+    height: 70px;
+    cursor: pointer;
+    z-index: 999;
+}#chat_bot:hover{
+height: 80px;
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    box-shadow: 0px 0px 10px 4px rgb(181, 181, 181);
+}
+nav img{
+    height: 90px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+nav ul li:hover{
+text-decoration: underline;
+}
+nav input[type="search"]{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+nav button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+nav button i{
+    padding-right: 5px;
+}
+nav div{
+    align-items: center;
+    display: flex;
+}
+nav div{
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+/* Partie Banner --- Partie Banner --- Partie Banner --- Partie Banner   */
+#banner{
+    margin-top: 10px;
+    background-image: url('../static/img/banner.jpeg');
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.sbanner{
+    color: white;
+}
+#banner .container {
+    padding-left: 3%;
+}
+#banner .container h1{
+    color: white;
+    width: 650px;
+    padding-top: 5%;
+    font-size: 2em;
+}
+#ligne_trains{
+    height: 100px;
+}
+/* Ligne des couleurs --- Ligne des couleurs --- Ligne des couleurs --- Ligne des couleurs --- Ligne des couleurs ---  */
+.red{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: rgb(246, 70, 70);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.pink{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: pink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.brown{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: rgb(235, 167, 167);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.orange{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: rgb(239, 205, 140);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.black{
+    color: white;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.purple{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: rgb(235, 181, 235);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.green{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: rgb(154, 231, 154);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.blue{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: rgb(170, 170, 225);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.grey{
+    color: black;
+    width: 40px;
+    height: 40px;
+    background: grey;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+.white{
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+}
+/* Partie Form --- Partie Form --- Partie Form --- Partie Form   */
+.form-search{
+    padding-right: 2%;
+}
+.container-form{
+    width: 400px;
+    height: 400px;
+    background: white;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.container-form p:first-child{
+    margin-bottom: 5px;
+    text-align: center;
+}
+.container-form small{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.lignes{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lignes a{
+    text-decoration: none;
+    color: black;
+}
+.lignes li{
+    list-style: none;
+    margin: 5px 5px;
+    padding-left: 0px;
+    cursor: pointer;
+}
+/* Partie Info du Train --- Partie Info du Train --- Partie Info du Train --- Partie Info du Train --- Partie Info du Train ---   */
+.details_train{
+    background: rgb(237, 237, 237);
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.details_train p{
+    margin: 20px 0px;
+}
+/* Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive ---   */
+/* Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive ---   */
+/* Partie Responsive --- Partie Respon
+sive --- Partie Responsive --- Partie Responsive --- Partie Responsive --- Partie Responsive ---   */
+@media screen and (max-width: 1000px){
+    nav{
+        justify-content: space-between;
+    }
+    nav ul{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(211, 211, 211);
+        display: none;
+    }
+    nav ul li{
+        margin: 50px 0px;
+        display: flex;
+    }
+    input[type="search"]{
+        display: none;
+    }
+    #xmark{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+@media screen and (min-width: 1000px){
+    #xmark, #bars{
+        display: none;
+    }
+}

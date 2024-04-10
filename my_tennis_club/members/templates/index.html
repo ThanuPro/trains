@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="chat_bot" src="../static/img/chat_bot.png" alt="chat_bot">
+<nav>
+    <div>
+    <i id="bars" class="fa-solid fa-bars"></i>
+<img src="../static/img/logo_train.jpg" alt="nav_logo">
+</div>
+<ul>
+    <i id="xmark" class="fa-solid fa-xmark"></i>
+    <li>Acceuil</a></li>
+    <li>Actualité</li>
+    <li>Nos lignes</a></li>
+    <li>Contactez-nous</li>
+</ul>
+<div>
+    <input  type="search" id="search-input" placeholder="Rechercher...">
+    <button type="button" name="co" id="co"><i class="fa-solid fa-user-plus"></i>Inscription</button>
+    <button type="button" name="co" id="co"><i class="fa-solid fa-user"></i>Connexion</button>
+</div>
+</nav>
+<main>
+<section id="banner">
+    <div class="container">
+        <h1>Consultez le plan de chaques Train de la SNCF.</h1>
+        <img id="ligne_trains" src="../static/img/lignes.png" alt="lignes_train">
+    </div>
+    <div class="form-search">
+        <div class="container-form">
+            <p>Quelle ligne souhaitez-vous consulter ?</p>
+            <small>Sélectionnez ci-dessous une ligne que vous souhaitez consulter.</small><br><br>
+            <p style="font-weight: bold;">Ligne :</p>
+            <ul class="lignes">
+                <li class="red"><a href="{% url 'show_train' train_id=1 %}">1</a></li>
+                <li class="green"><a href="{% url 'show_train' train_id=2 %}">2</a></li>
+                <li class="pink"><a href="{% url 'show_train' train_id=3 %}">3</a></li>
+                <li class="brown"><a href="{% url 'show_train' train_id=4 %}">4</a></li>
+                <li class="orange"><a href="{% url 'show_train' train_id=5 %}">5</a></li>
+                <li class="grey"><a href="{% url 'show_train' train_id=6 %}">6</a></li>
+                <li class="blue"><a href="{% url 'show_train' train_id=7 %}">7</a></li>
+                <li class="purple"><a href="{% url 'show_train' train_id=8 %}">8</a></li>
+                <li class="black"><a href="{% url 'show_train' train_id=9 %}">9</a></li>
+                <li class="white"><a href="{% url 'show_train' train_id=10 %}">10</a></li>
+            </ul>
+        </div>
+        
+</section>
+</main>
+<footer>
+
+</footer>
+</body>
+<script src="../static/js/main.js"></script>
+<script src="https://kit.fontawesome.com/9d929d966a.js" crossorigin="anonymous"></script>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchInput = document.getElementById('search-input');
+        const lignes = document.querySelectorAll('.lignes li');
+
+        searchInput.addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+            lignes.forEach(function (ligne) {
+                const ligneNumber = ligne.textContent.trim();
+                if (ligneNumber.toLowerCase().includes(searchValue)) {
+                    ligne.style.display = 'block';
+                } else {
+                    ligne.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</html>
